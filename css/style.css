@@ -1,0 +1,92 @@
+/** selektor uniwersalny - jako target wszystkie elementy**/
+/*
+* {
+    color: red;
+}
+/*
+
+/*selekror laczony -bez spacji mozna laczyc np. element o klasie, element o klasach itd.*/
+div.uniwersalny {
+    color: blue;
+}
+
+/*pseudo-elementy - nie ma ich w HTML*/
+p::before {
+/*    bez "content" pseudoelement nie istnieje*/
+    content: '*';
+}
+
+p::after {
+    content: "*";
+}
+
+/*pseudo-klasy */
+/*najechanie myszka*/
+a:hover {
+    color: violet;
+}
+
+/*aktywne pole formularza*/
+input:focus {
+    background-color: aqua;
+}
+
+/*
+ul li:first-child {
+    color: orange;
+}
+
+ul li:last-child {
+    color: orange;
+}
+
+ul li:first-of-type {
+    color: red;
+}
+
+ul li:nth-of-type(4) {
+    color: yellow;
+}
+
+ul li:nth-of-type(even) {
+    color: brown;
+}
+
+ul li:nth-of-type(4n + 1) {
+    color: orange;
+}*/
+
+ul li:nth-of-type(even) {
+    color: green;
+}
+
+ul li:nth-last-of-type(even) {
+    color: red;
+}
+
+/*selektory atrybutow*/
+input[title] {
+    border: 2px solid green;
+}
+
+input[title="nowy"] {
+    border: 2px solid red;
+}
+
+/*zawiera konkretny ciag*/
+input[title~="jest"] {
+    border: 2px solid brown;
+}
+
+input[title*="o"] {
+    border: 2px solid brown;
+}
+
+input[title^="no"] {
+    border: 3px solid black;
+}
+
+input[title$="fq"] {
+    border: 3px solid grey;
+}
+
