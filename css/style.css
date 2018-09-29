@@ -90,3 +90,128 @@ input[title$="fq"] {
     border: 3px solid grey;
 }
 
+/*pozycjonowanie*/
+
+/*zepnij main = .main...*/
+.main-container {
+    position: relative;
+}
+
+.main-container-inner {
+    height: 200px;
+}
+/*zapnij orange, zapnij gray*/
+.orange {
+    background-color: orange;
+    position: absolute;
+    width: 100%;
+    top: 20px;
+    left: 80px;
+}
+.gray {
+    background-color: gray;
+}
+/*pozycja fixed pomija rozdicow i ustawia sie wzgledem okna przegladarki*/
+#main-nav {
+/*
+    position: fixed;
+    width: 100%;
+*/
+    background-color: blue;
+/*
+    left: 0;
+*/
+    position: sticky;
+    z-index: 1;
+    top: 0; 
+}
+.jednostki-miary {
+    margin-top: 100px;
+    font-size: 20px;
+}
+.jednostki-miary > div {
+    background-color: rgba(176, 200, 193, 0.3);
+    margin-bottom: 10px;
+}
+
+#piksele {
+    width: 400px;
+}
+#em {
+    width: 20em;
+}
+
+#procenty {
+    width: 50%;
+}
+
+#vh{
+    height: 10vh;
+}
+
+.wyswietlanie .w-inner {
+    display: inline-block;
+    height: 300px;
+    background-color: red;
+    width: 32%;
+    float: left;
+/*
+    transition-property: width;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in;
+*/
+/*    transition-delay: 0.5s;*/
+    transition: width 0.5s ease-in;
+}
+
+.wyswietlanie .w-inner:hover {
+    width: 50%;
+}
+/*zawsze jak jest float to musi być clear*/
+.clear {
+    clear: both;
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    transition: all 0.4s;
+}
+.red {
+    background-color: red;
+}
+.blue {
+    background-color: blue;
+}
+.green {
+    background-color: green;
+}
+.red:hover {
+    width: 300px;
+}
+.blue:hover {
+    height: 300px;
+}
+.green:hover {
+    width: 300px;
+    height: 300px;
+}
+
+.background {
+    height: 500px;
+    background-image: url('https://natura-rzeczy.pl/userdata/gfx/8e2ded3b14ef7e282a217b0c48639c26.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.overflow {
+    width: 200px;
+    height: 200px;
+    border: 2px dotted blue;
+    overflow: hidden;
+}
