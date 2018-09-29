@@ -214,4 +214,90 @@ input[title$="fq"] {
     height: 200px;
     border: 2px dotted blue;
     overflow: hidden;
+    box-sizing: border-box;
+}
+
+.transform > img {
+/*    transform: rotate(720deg);*/
+    transition: all 0.4s;
+}
+
+.transform > img:hover {
+    transform:rotate(720deg);
+}
+
+.centrowanie {
+    width: 400px;
+    height: 400px;
+    background-color: bisque;
+    position: relative;
+}
+
+.centrowanie-inner {
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.transform-2 {
+    width: 400px;
+    height: 600px;
+    overflow: hidden;
+}
+
+/*ten element powiększa się ale przykrywa inne elementy, muszę dodac: .transform-2 {
+    width: 400px; ustawic na sztywno
+    height: 600px; ustawic rowniez na sztywno
+    overflow: hidden; 
+czyli to co wyzej*/
+
+.transform-2 > img:hover {
+/*    transform:all 0.4s;   */
+    animation-name: skalowanie;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+}
+
+.flex-container {
+    height: 600px;
+    background-color: black;
+/*    jak ustawiasz display: flex; to ustawiaj flex-wrap: wrap;*/
+    display: flex;
+/*    flex-wrap: wrap;*/
+    justify-content: space-around;
+}
+
+.flex-container-inner {
+    height: 100px;
+    background-color: red;
+    flex-basis: 10%;
+    flex-shrink: 1;
+}
+
+.flex-container-inner:first-of-type {
+    align-self: flex-start;
+}
+
+.flex-container-inner:nth-of-type(2) {
+    order: 4;
+}
+
+.flex-container-inner:nth-of-type(3) {
+    order: 3;
+    flex-shrink: 3;
+}
+
+@keyframes skalowanie {
+/*    poczatek animacjimacj from - to (z do)*/
+    0%,100% {
+        transform: scale(1)    
+    }
+    50% {
+        transform: scale(2);      
+    }
 }
